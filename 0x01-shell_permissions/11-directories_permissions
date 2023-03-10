@@ -1,2 +1,2 @@
 #!/bin//bash
-chmod --preserve-root -R a+x .
+find . type -d | chmod a+x
