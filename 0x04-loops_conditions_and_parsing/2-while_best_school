@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# This script displays "Best School" 10 times using while
+LIMIT=10
+var=0
+while [ $var -lt $LIMIT ]
+do
+	echo -n "Best School
+"
+	var=$((var + 1))
+done
+exit 0

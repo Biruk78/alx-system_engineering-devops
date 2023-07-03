@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# script installs nginx and configures nginx to display custmized content
+apt-get update -y
+apt-get upgrade -y
+apt install nginx -y
+service nginx restart
+echo 'Hello World!' | tee /var/www/html/*

@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# This script traps a signal
+trap "echo I am invincible!!!" SIGTERM
+
+val=0
+
+while (( val==0 ))
+do
+	echo "To infinity and beyond"
+	sleep 2
+done

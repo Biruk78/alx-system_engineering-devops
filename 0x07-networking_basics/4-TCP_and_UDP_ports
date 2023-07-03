@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This script prints all the listening ports and the pids of the processes with
+#+ to which the sockets belong
+netstat -p -l

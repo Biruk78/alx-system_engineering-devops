@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# This script displays "Best School" 10 times with hi at 9th iteration
+
+var=0
+LIMIT=10
+
+while [ "$var" -lt "$LIMIT" ]
+do
+	echo -n "Best School
+"
+if [ $var -eq 8 ]
+then
+	echo -n "Hi
+"
+fi
+	(( var++ ))
+
+done
+exit 0

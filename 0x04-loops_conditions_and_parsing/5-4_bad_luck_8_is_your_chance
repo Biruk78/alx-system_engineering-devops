@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# This script displays bad luck and good luck during certain iterations
+
+var=1
+LIMIT=10
+while [ $var -le $LIMIT ]
+do
+if [ $var -eq 4 ]
+then
+	echo -n "bad luck
+"
+elif [ $var -eq 8 ]
+then
+	echo -n "good luck
+"
+else
+	echo -n "Best School
+"
+fi
+	(( var++ ))
+done
+exit 0

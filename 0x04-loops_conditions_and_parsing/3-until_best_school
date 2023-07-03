@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# This script dislplays "Best School" 10 times using until
+var=0
+LIMIT=10
+until [ "$var" = "$LIMIT" ]
+do
+	echo -n "Best School
+"
+	(( var++ ))
+done
+exit 0

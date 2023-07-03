@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# Bash function that lists record infos for all subdomains of a given domain
+
+subdomain_info(){
+
+if ! [ $2 ]; then
+	
+	arrsub=(www lb-01 web-01 web-02)
+	for i in {0..3}
+	do
+	   X=$(dig "${arrsub[$i]}.$1" | grep -A1 "ANSWER SECTION" | tail -1 | awk '{print $4" "$5}')
+	   arrX=($X)
+	   echo "The subdomain ${arrsub[$i]} is a ${arrX[0]} record and points to ${arrX[1]}"
+	done
+else
+	X=$(dig "$2.$1" | grep -A1 "ANSWER SECTION" | awk '{print $4" "$5}')
+	arrX=($X)
+	echo "The subdomain $2 is a ${arrX[0]} record and points to ${arrX[1]}"
+fi
+}
+
+subdomain_info "$1" "$2"

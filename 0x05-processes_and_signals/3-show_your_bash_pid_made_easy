@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This script list a procees name with its pid
+
+pgrep -l bash
